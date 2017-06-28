@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Plugins</ion-title>
+  <ion-buttons end>
+    <button ion-button icon-only small (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+  <ion-range [(ngModel)]="brightness" (ionChange) = "changeValue()">
+    <ion-icon range-left small name="sunny"></ion-icon>
+    <ion-icon range-right name="sunny"></ion-icon>
+  </ion-range>
+</ion-item>
+
+<ion-item>
+  <ion-label>Battery-Status: {{bateria}}%</ion-label>
+</ion-item>
+<button ion-button large=""  block (click) = "openContacts()" >Contacts</button>
+<img [src]="img" *ngIf="!! img">
+</ion-content>
